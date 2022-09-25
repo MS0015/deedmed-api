@@ -1,0 +1,7411 @@
+{
+	"info": {
+		"_postman_id": "75795366-bd80-4178-9438-dab903305358",
+		"name": "EXEVE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7244828"
+	},
+	"item": [
+		{
+			"name": "DeedMed",
+			"item": [
+				{
+					"name": "Reviews",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/reviews",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"reviews"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Reviews By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/reviews/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"reviews",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Reviews By Ratings",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/reviews/ratings/:star_rating",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"reviews",
+										"ratings",
+										":star_rating"
+									],
+									"variable": [
+										{
+											"key": "star_rating",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Reviews By Product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/reviews/product/:product_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"reviews",
+										"product",
+										":product_id"
+									],
+									"variable": [
+										{
+											"key": "product_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Reviews By UserID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/reviews/user/:review_for",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"reviews",
+										"user",
+										":review_for"
+									],
+									"variable": [
+										{
+											"key": "review_for",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Reviews",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"review_for\": \"\",\r\n    \"review_by\": \"\",\r\n    \"reviews\": \"\",\r\n    \"ratings\": \"\",\r\n    \"date\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/reviews/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"reviews",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Reviews",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"review_for\": \"\",\r\n    \"review_by\": \"\",\r\n    \"reviews\": \"\",\r\n    \"ratings\": \"\",\r\n    \"date\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/reviews/delete/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"reviews",
+										"delete",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Reviews",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"review_for\": \"\",\r\n    \"review_by\": \"\",\r\n    \"reviews\": \"\",\r\n    \"ratings\": \"\",\r\n    \"date\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/reviews/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"reviews",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get New Requests",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/users/requests/new_requests",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"requests",
+										"new_requests"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Users By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/users/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Users By Ratings",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/users/ratings/:star_rating",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"ratings",
+										":star_rating"
+									],
+									"variable": [
+										{
+											"key": "star_rating",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Users By User ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/users/user/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"user",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Users User Type",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/users/typeof/:user_type",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"typeof",
+										":user_type"
+									],
+									"variable": [
+										{
+											"key": "user_type",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Users",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"user_name\": \"\",\r\n    \"business_name\": \"\",\r\n    \"br\": \"\",\r\n    \"serving_area\": \"\",\r\n    \"email\": \"\",\r\n    \"password\": \"\",\r\n    \"profile_pic\": \"\",\r\n    \"user_type\": \"\",\r\n    \"phone_no\": \"\",\r\n    \"hourly_rate\": \"\",\r\n    \"is_confirmed\": \"\",\r\n    \"is_deleted\": \"\",\r\n    \"added_on\": \"\",\r\n    \"billing_address\": \"\",\r\n    \"billing_email\": \"\",\r\n    \"billing_phone\": \"\",\r\n    \"dob\": \"\",\r\n    \"clinic_address\": \"\",\r\n    \"gender\": \"\",\r\n    \"reg_no\": \"\",\r\n    \"district\": \"\",\r\n    \"location\": \"\",\r\n    \"area_of_interest\": \"\",\r\n    \"qualification\": \"\",\r\n    \"membership_id\": \"\",\r\n    \"description\": \"\",\r\n    \"bank_id\": \"\",\r\n    \"allergies\": \"\",\r\n    \"medications\": \"\",\r\n    \"experience\": \"\",\r\n    \"is_featured\": \"\",\r\n    \"is_blocked\": \"\",\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Users",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/users/delete/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"delete",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Users",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"user_name\": \"\",\r\n    \"business_name\": \"\",\r\n    \"br\": \"\",\r\n    \"serving_area\": \"\",\r\n    \"email\": \"\",\r\n    \"password\": \"\",\r\n    \"profile_pic\": \"\",\r\n    \"user_type\": \"\",\r\n    \"phone_no\": \"\",\r\n    \"hourly_rate\": \"\",\r\n    \"is_confirmed\": \"\",\r\n    \"is_deleted\": \"\",\r\n    \"added_on\": \"\",\r\n    \"billing_address\": \"\",\r\n    \"billing_email\": \"\",\r\n    \"billing_phone\": \"\",\r\n    \"dob\": \"\",\r\n    \"clinic_address\": \"\",\r\n    \"gender\": \"\",\r\n    \"reg_no\": \"\",\r\n    \"district\": \"\",\r\n    \"location\": \"\",\r\n    \"area_of_interest\": \"\",\r\n    \"qualification\": \"\",\r\n    \"membership_id\": \"\",\r\n    \"description\": \"\",\r\n    \"bank_id\": \"\",\r\n    \"allergies\": \"\",\r\n    \"medications\": \"\",\r\n    \"experience\": \"\",\r\n    \"is_featured\": \"\",\r\n    \"is_blocked\": \"\",\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/users/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Billing",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"user_name\": \"\",\r\n    \"business_name\": \"\",\r\n    \"br\": \"\",\r\n    \"serving_area\": \"\",\r\n    \"email\": \"\",\r\n    \"password\": \"\",\r\n    \"profile_pic\": \"\",\r\n    \"user_type\": \"\",\r\n    \"phone_no\": \"\",\r\n    \"hourly_rate\": \"\",\r\n    \"is_confirmed\": \"\",\r\n    \"is_deleted\": \"\",\r\n    \"added_on\": \"\",\r\n    \"billing_address\": \"\",\r\n    \"billing_email\": \"\",\r\n    \"billing_phone\": \"\",\r\n    \"dob\": \"\",\r\n    \"clinic_address\": \"\",\r\n    \"gender\": \"\",\r\n    \"reg_no\": \"\",\r\n    \"district\": \"\",\r\n    \"location\": \"\",\r\n    \"area_of_interest\": \"\",\r\n    \"qualification\": \"\",\r\n    \"membership_id\": \"\",\r\n    \"description\": \"\",\r\n    \"bank_id\": \"\",\r\n    \"allergies\": \"\",\r\n    \"medications\": \"\",\r\n    \"experience\": \"\",\r\n    \"is_featured\": \"\",\r\n    \"is_blocked\": \"\",\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/users/update/billings/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"update",
+										"billings",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Featured User",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/users/featured/featured",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"featured",
+										"featured"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Featured User By Interest",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/users/featured/featured/:area_of_interest",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"featured",
+										"featured",
+										":area_of_interest"
+									],
+									"variable": [
+										{
+											"key": "area_of_interest",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User Blocking",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"user_name\": \"\",\r\n    \"business_name\": \"\",\r\n    \"br\": \"\",\r\n    \"serving_area\": \"\",\r\n    \"email\": \"\",\r\n    \"password\": \"\",\r\n    \"profile_pic\": \"\",\r\n    \"user_type\": \"\",\r\n    \"phone_no\": \"\",\r\n    \"hourly_rate\": \"\",\r\n    \"is_confirmed\": \"\",\r\n    \"is_deleted\": \"\",\r\n    \"added_on\": \"\",\r\n    \"billing_address\": \"\",\r\n    \"billing_email\": \"\",\r\n    \"billing_phone\": \"\",\r\n    \"dob\": \"\",\r\n    \"clinic_address\": \"\",\r\n    \"gender\": \"\",\r\n    \"reg_no\": \"\",\r\n    \"district\": \"\",\r\n    \"location\": \"\",\r\n    \"area_of_interest\": \"\",\r\n    \"qualification\": \"\",\r\n    \"membership_id\": \"\",\r\n    \"description\": \"\",\r\n    \"bank_id\": \"\",\r\n    \"allergies\": \"\",\r\n    \"medications\": \"\",\r\n    \"experience\": \"\",\r\n    \"is_featured\": \"\",\r\n    \"is_blocked\": \"\",\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/users/update/is_blocked/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"update",
+										"is_blocked",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "*Update User Prices",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/users/pricing/:hourly_rate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"pricing",
+										":hourly_rate"
+									],
+									"variable": [
+										{
+											"key": "hourly_rate",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Appoinments",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Appointments By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Appointments By Patient ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments/patient/:patient_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"patient",
+										":patient_id"
+									],
+									"variable": [
+										{
+											"key": "patient_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Appointments By Doctor ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments/doctor/:doctor_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"doctor",
+										":doctor_id"
+									],
+									"variable": [
+										{
+											"key": "doctor_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Appointments",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"doctor_id\": \"\",\r\n    \"patient_id\": \"\",\r\n    \"appointment_title\": \"\",\r\n    \"appointment_reason\": \"\",\r\n    \"appointment_time\": \"\",\r\n    \"appointment_date\": \"\",\r\n    \"patient_details_id\": \"\",\r\n    \"appointment_status\": \"\",\r\n    \"message\": \"\",\r\n    \"patient_name\": \"\",\r\n    \"profile\": \"\",\r\n    \"appointment_type\": \"\",\r\n    \"attachment_1\": \"\",\r\n    \"attachment_2\": \"\",\r\n    \"attachment_3\": \"\",\r\n    \"attachment_4\": \"\",\r\n    \"attachment_5\": \"\",\r\n    \"attachment_6\": \"\",\r\n    \"medical_details\": \"\",\r\n    \"amount_submitted\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments/create_appointment/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"create_appointment",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Appointments",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments/delete/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"delete",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Appointments",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"doctor_id\": \"\",\r\n    \"patient_id\": \"\",\r\n    \"appointment_title\": \"\",\r\n    \"appointment_reason\": \"\",\r\n    \"appointment_time\": \"\",\r\n    \"appointment_date\": \"\",\r\n    \"patient_details_id\": \"\",\r\n    \"appointment_status\": \"\",\r\n    \"message\": \"\",\r\n    \"patient_name\": \"\",\r\n    \"profile\": \"\",\r\n    \"appointment_type\": \"\",\r\n    \"attachment_1\": \"\",\r\n    \"attachment_2\": \"\",\r\n    \"attachment_3\": \"\",\r\n    \"attachment_4\": \"\",\r\n    \"attachment_5\": \"\",\r\n    \"attachment_6\": \"\",\r\n    \"medical_details\": \"\",\r\n    \"amount_submitted\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments/update/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"update",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Appointment Status",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"doctor_id\": \"\",\r\n    \"patient_id\": \"\",\r\n    \"appointment_title\": \"\",\r\n    \"appointment_reason\": \"\",\r\n    \"appointment_time\": \"\",\r\n    \"appointment_date\": \"\",\r\n    \"patient_details_id\": \"\",\r\n    \"appointment_status\": \"\",\r\n    \"message\": \"\",\r\n    \"patient_name\": \"\",\r\n    \"profile\": \"\",\r\n    \"appointment_type\": \"\",\r\n    \"attachment_1\": \"\",\r\n    \"attachment_2\": \"\",\r\n    \"attachment_3\": \"\",\r\n    \"attachment_4\": \"\",\r\n    \"attachment_5\": \"\",\r\n    \"attachment_6\": \"\",\r\n    \"medical_details\": \"\",\r\n    \"amount_submitted\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments/update/status/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"update",
+										"status",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Privacy",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/privacy",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"privacy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Privacy",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"privacy_message\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/privacy/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"privacy",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Security",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/security",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"security"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Security",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"security_message\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/security/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"security",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Price",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/set_prices",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"set_prices"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Price",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"hourly_rate\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/set_prices/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"set_prices",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Bank",
+					"item": [
+						{
+							"name": "Add Bank",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"user_id\": \"\",\r\n    \"account_holder_name\": \"\",\r\n    \"bank_name\": \"\",\r\n    \"branch\": \"\",\r\n    \"account_no\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/bank",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"bank"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Bank",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"user_id\": \"\",\r\n    \"account_holder_name\": \"\",\r\n    \"bank_name\": \"\",\r\n    \"branch\": \"\",\r\n    \"account_no\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/bank/update/:user_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"bank",
+										"update",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Bank By User ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"hourly_rate\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/bank/:user_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"bank",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Billings",
+					"item": [
+						{
+							"name": "Get List",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments/secure/billings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"secure",
+										"billings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Billings By ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments/secure/billings/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"secure",
+										"billings",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Billings By Patient ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments/secure/billings/patient/:patient_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"secure",
+										"billings",
+										"patient",
+										":patient_id"
+									],
+									"variable": [
+										{
+											"key": "patient_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Billings By Doctor ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments/secure/billings/doctor/:doctor_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"secure",
+										"billings",
+										"doctor",
+										":doctor_id"
+									],
+									"variable": [
+										{
+											"key": "doctor_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Billings",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"patient_id\": \"\",\r\n    \"appointment_id\": \"\",\r\n    \"minutes\": \"\",\r\n    \"billing_amount\": \"\",\r\n    \"service_fee\": \"\",\r\n    \"grand_total\": \"\",\r\n    \"payment_status\": \"\",\r\n    \"trx_proof\": \"\",\r\n    \"doctor_id\": \"\",\r\n    \"sessions\": \"\",\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments/secure/billings/setmethod/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"secure",
+										"billings",
+										"setmethod",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Billings",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments/secure/billings/delete/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"secure",
+										"billings",
+										"delete",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Billings",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"patient_id\": \"\",\r\n    \"appointment_id\": \"\",\r\n    \"minutes\": \"\",\r\n    \"billing_amount\": \"\",\r\n    \"service_fee\": \"\",\r\n    \"grand_total\": \"\",\r\n    \"payment_status\": \"\",\r\n    \"trx_proof\": \"\",\r\n    \"doctor_id\": \"\",\r\n    \"sessions\": \"\",\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/appointments/secure/billings/update/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"appointments",
+										"secure",
+										"billings",
+										"update",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Add Users",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"first_name\": \"\",\r\n    \"password\": \"\",\r\n    \"user_type\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/auth",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Users",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"first_name\": \"\",\r\n    \"password\": \"\",\r\n    \"user_type\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/auth/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"first_name\": \"\",\r\n    \"password\": \"\",\r\n    \"user_type\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "*Update User Prices",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"first_name\": \"\",\r\n    \"password\": \"\",\r\n    \"user_type\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/auth/pricing/:hourly_rate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"pricing",
+										":hourly_rate"
+									],
+									"variable": [
+										{
+											"key": "hourly_rate",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Availability",
+					"item": [
+						{
+							"name": "Get List",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/availability",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"availability"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Availability By ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/availability/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"availability",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Availability By Doctor ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/availability/userslot/:user_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"availability",
+										"userslot",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Availability",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"day_id\": \"\",\r\n    \"user_id\": \"\",\r\n    \"time1\": \"\",\r\n    \"time2\": \"\",\r\n    \"time3\": \"\",\r\n    \"time4\": \"\",\r\n    \"is_active\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/availability",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"availability"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Availability",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/availability/delete/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"availability",
+										"delete",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Availability",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"day_id\": \"\",\r\n    \"user_id\": \"\",\r\n    \"time1\": \"\",\r\n    \"time2\": \"\",\r\n    \"time3\": \"\",\r\n    \"time4\": \"\",\r\n    \"is_active\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/availability/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"availability",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Orders[Pharmacy]",
+					"item": [
+						{
+							"name": "Get List",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get pharmacy order By ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/orders/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get pharmacy order By Doctor ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/orders/users/:user_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"users",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get pharmacy order By Pharmacy ID",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/orders/pharmacy/:pharmacy_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"pharmacy",
+										":pharmacy_id"
+									],
+									"variable": [
+										{
+											"key": "pharmacy_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add pharmacy order",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"order_no\": \"\",\r\n    \"pharmacy_id\": \"\",\r\n    \"user_id\": \"\",\r\n    \"no_of_precriptions\": \"\",\r\n    \"precriptions_id\": \"\",\r\n    \"amount\": \"\",\r\n    \"pharmacy_name\": \"\",\r\n    \"status\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete pharmacy order",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/orders/delete/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"delete",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update pharmacy order",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"order_no\": \"\",\r\n    \"pharmacy_id\": \"\",\r\n    \"user_id\": \"\",\r\n    \"no_of_precriptions\": \"\",\r\n    \"precriptions_id\": \"\",\r\n    \"amount\": \"\",\r\n    \"pharmacy_name\": \"\",\r\n    \"status\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/orders/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update pharmacy order amount",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"order_no\": \"\",\r\n    \"pharmacy_id\": \"\",\r\n    \"user_id\": \"\",\r\n    \"no_of_precriptions\": \"\",\r\n    \"precriptions_id\": \"\",\r\n    \"amount\": \"\",\r\n    \"pharmacy_name\": \"\",\r\n    \"status\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/orders/update/price/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"update",
+										"price",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update pharmacy order status",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"order_no\": \"\",\r\n    \"pharmacy_id\": \"\",\r\n    \"user_id\": \"\",\r\n    \"no_of_precriptions\": \"\",\r\n    \"precriptions_id\": \"\",\r\n    \"amount\": \"\",\r\n    \"pharmacy_name\": \"\",\r\n    \"status\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/orders/update/status/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										"update",
+										"status",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Counts",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"doctor_id\": \"\",\r\n    \"patient_id\": \"\",\r\n    \"doctor_name\": \"\",\r\n    \"patient_name\": \"\",\r\n    \"patient_type\": \"\",\r\n    \"consultation_count\": \"\",\r\n    \"report_count\": \"\",\r\n    \"review_count\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/counts/post/result",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"counts",
+										"post",
+										"result"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Counts By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/counts/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"counts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Counts By Doctor ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/counts/mypatients/:doctor_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"counts",
+										"mypatients",
+										":doctor_id"
+									],
+									"variable": [
+										{
+											"key": "doctor_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Counts",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"doctor_id\": \"\",\r\n    \"patient_id\": \"\",\r\n    \"doctor_name\": \"\",\r\n    \"patient_name\": \"\",\r\n    \"patient_type\": \"\",\r\n    \"consultation_count\": \"\",\r\n    \"report_count\": \"\",\r\n    \"review_count\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/counts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"counts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Counts",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/counts/delete/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"counts",
+										"delete",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Counts",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"doctor_id\": \"\",\r\n    \"patient_id\": \"\",\r\n    \"doctor_name\": \"\",\r\n    \"patient_name\": \"\",\r\n    \"patient_type\": \"\",\r\n    \"consultation_count\": \"\",\r\n    \"report_count\": \"\",\r\n    \"review_count\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/counts/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"counts",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Comments",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/comments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get comments By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/comments/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"comments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get comments By Doctor ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/comments/appt/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"comments",
+										"appt",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add comments",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"appointment_id\": \"\",\r\n    \"comment\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/comments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete comments",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/comments/delete/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"comments",
+										"delete",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update comments",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"appointment_id\": \"\",\r\n    \"comment\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/comments/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"comments",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Prescriptions",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/prescriptions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"prescriptions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get prescription By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/prescriptions/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"prescriptions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get prescription By Doctor ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/prescriptions/appt/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"prescriptions",
+										"appt",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add prescription",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"appointment_id\": \"\",\r\n    \"doctor_id\": \"\",\r\n    \"patient_id\": \"\",\r\n    \"medical_type\": \"\",\r\n    \"quantity\": \"\",\r\n    \"dosage\": \"\",\r\n    \"frequency\": \"\",\r\n    \"time\": \"\",\r\n    \"remarks\": \"\",\r\n    \"duration\": \"\",\r\n    \"additional_attribute1\": \"\",\r\n    \"additional_attribute2\": \"\",\r\n    \"additional_attribute3\": \"\",\r\n    \"additional_attribute4\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/prescriptions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"prescriptions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete prescription",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/prescriptions/delete/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"prescriptions",
+										"delete",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update prescription",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"appointment_id\": \"\",\r\n    \"doctor_id\": \"\",\r\n    \"patient_id\": \"\",\r\n    \"medical_type\": \"\",\r\n    \"quantity\": \"\",\r\n    \"dosage\": \"\",\r\n    \"frequency\": \"\",\r\n    \"time\": \"\",\r\n    \"remarks\": \"\",\r\n    \"duration\": \"\",\r\n    \"additional_attribute1\": \"\",\r\n    \"additional_attribute2\": \"\",\r\n    \"additional_attribute3\": \"\",\r\n    \"additional_attribute4\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/prescriptions/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"prescriptions",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Favourites",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/favourites",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"favourites"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get favourites By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/favourites/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"favourites",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get favourites By Doctor ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/favourites/appt/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"favourites",
+										"appt",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add favourites",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"doctor_id\": \"\",\r\n    \"patient_id\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/favourites",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"favourites"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete favourites",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/favourites/delete/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"favourites",
+										"delete",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update favourites",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"doctor_id\": \"\",\r\n    \"patient_id\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/favourites/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"favourites",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Test",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/test",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get tests By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/test/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"test",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get tests By Doctor ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/test/appt/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"test",
+										"appt",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add tests",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"appointment_id\": \"\",\r\n    \"doctor_id\": \"\",\r\n    \"patient_id\": \"\",\r\n    \"medical_type\": \"\",\r\n    \"quantity\": \"\",\r\n    \"dosage\": \"\",\r\n    \"time\": \"\",\r\n    \"remarks\": \"\",\r\n    \"duration\": \"\",\r\n    \"additional_attribute1\": \"\",\r\n    \"additional_attribute2\": \"\",\r\n    \"additional_attribute3\": \"\",\r\n    \"additional_attribute4\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/test",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete tests",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/test/delete/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"test",
+										"delete",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update tests",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"appointment_id\": \"\",\r\n    \"doctor_id\": \"\",\r\n    \"patient_id\": \"\",\r\n    \"medical_type\": \"\",\r\n    \"quantity\": \"\",\r\n    \"dosage\": \"\",\r\n    \"time\": \"\",\r\n    \"remarks\": \"\",\r\n    \"duration\": \"\",\r\n    \"additional_attribute1\": \"\",\r\n    \"additional_attribute2\": \"\",\r\n    \"additional_attribute3\": \"\",\r\n    \"additional_attribute4\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/test/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"test",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Earning",
+					"item": [
+						{
+							"name": "Get List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/earning",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"earning"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Earning By ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/earning/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"earning",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Earning By Doctor ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/earning/appt/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"earning",
+										"appt",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Earning",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"user_id\": \"\",\r\n    \"status\": \"\",\r\n    \"month\": \"\",\r\n    \"amount\": \"\",\r\n    \"due_on\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/earning",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"earning"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Earning",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5050/api/v1/test/earning/:appointment_id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"test",
+										"earning",
+										":appointment_id"
+									],
+									"variable": [
+										{
+											"key": "appointment_id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Earning",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"\",\r\n    \"user_id\": \"\",\r\n    \"status\": \"\",\r\n    \"month\": \"\",\r\n    \"amount\": \"\",\r\n    \"due_on\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5050/api/v1/earning/update/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5050",
+									"path": [
+										"api",
+										"v1",
+										"earning",
+										"update",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "deedmed-backend-new",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Category",
+							"item": [
+								{
+									"name": "Create - Category - Admin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/D:/Entertainment/Wallpapers/white.jpg"
+												},
+												{
+													"key": "name",
+													"value": "Brain",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/category/",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"category",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get all - Category - Admin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/category",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"category"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Patient",
+							"item": [
+								{
+									"name": "Get all patients - Admin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/D:/Downloads/_Images/1_-a5QVZFqJ06W7i1di1uIXg.png"
+												},
+												{
+													"key": "name",
+													"value": "Brain",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/patient",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"patient"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get a Patient- Admin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/D:/Downloads/_Images/1_-a5QVZFqJ06W7i1di1uIXg.png"
+												},
+												{
+													"key": "name",
+													"value": "Brain",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/patient/63e79ae8-b11a-46b8-84ca-f64b41857753",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"patient",
+												"63e79ae8-b11a-46b8-84ca-f64b41857753"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add a patient - Admin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"ganeshpatient06@gmail.com\",\r\n    \"password\": \"password\",\r\n    \"phoneNumber\": \"0776361006\",\r\n    \"userType\": \"GUARDIAN\",\r\n    \"name\": \"Ganesh\",\r\n    \"gender\": \"MALE\",\r\n    \"district\": \"Matara\",\r\n    \"address\": \"Dickwella\",\r\n    \"dob\": \"1996-07-02\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/patient",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"patient"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Doctor",
+							"item": [
+								{
+									"name": "Get a Doctor- Admin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/D:/Downloads/_Images/1_-a5QVZFqJ06W7i1di1uIXg.png"
+												},
+												{
+													"key": "name",
+													"value": "Brain",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/doctor/58767269-3d03-492a-9f9d-701196b7e3d3",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"doctor",
+												"58767269-3d03-492a-9f9d-701196b7e3d3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get all doctors - Admin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/D:/Downloads/_Images/1_-a5QVZFqJ06W7i1di1uIXg.png"
+												},
+												{
+													"key": "name",
+													"value": "Brain",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/doctor",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"doctor"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add a doctor - Admin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"ganeshdoctor056@gmail.com\",\r\n    \"phoneNumber\": \"0776366006\",\r\n    \"name\": \"Ganesh\",\r\n    \"gender\": \"MALE\",\r\n    \"district\": \"Matara\",\r\n    \"privateClinicAddress\": \"Dickwella\",\r\n    \"telephoneNumber\": \"0719960702\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"languages\": [\r\n        \"English\"\r\n    ],\r\n    \"serviceCategories\": [\r\n        \"Heart\",\r\n        \"Eye\"\r\n    ],\r\n    \"regNo\": \"MALE\",\r\n    \"experienceYears\": 2,\r\n    \"serviceAreas\": [\r\n        \"ONLINE\",\r\n        \"PRIVATE_CLINIC\"\r\n    ],\r\n    \"qualifications\": [\r\n        \"MBBS\"\r\n    ],\r\n    \"memberships\": [],\r\n    \"bankAccountHolderName\": \"Ganesh\",\r\n    \"bankName\": \"Sampath\",\r\n    \"bankBranch\": \"Matara\",\r\n    \"bankAccountNumber\": \"1234\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/doctor",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"doctor"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Appointment",
+							"item": [
+								{
+									"name": "Get appointments of a patient - Admin",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "files",
+													"type": "file",
+													"src": "/D:/Downloads/Topics.docx"
+												},
+												{
+													"key": "doctorId",
+													"value": "861177bc-fd6c-4d65-a2e9-9efd6e1f412f",
+													"type": "text"
+												},
+												{
+													"key": "patientId",
+													"value": "c985971e-e3e0-4bb5-9466-6e4bd4ccfb49",
+													"type": "text"
+												},
+												{
+													"key": "date",
+													"value": "2022-06-05",
+													"type": "text"
+												},
+												{
+													"key": "slotTime",
+													"value": "08:00",
+													"type": "text"
+												},
+												{
+													"key": "slotType",
+													"value": "EVENING",
+													"type": "text"
+												},
+												{
+													"key": "appointmentType",
+													"value": "ONLINE",
+													"type": "text"
+												},
+												{
+													"key": "purpose",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "medicalDetails",
+													"value": "fever",
+													"type": "text"
+												},
+												{
+													"key": "message",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "amount",
+													"value": "1000",
+													"type": "text"
+												},
+												{
+													"key": "paymentId",
+													"value": "a33f0a34-30d9-42da-b4c1-822cd8590f68",
+													"type": "text"
+												},
+												{
+													"key": "parentId",
+													"value": "c985971e-e3e0-4bb5-9466-6e4bd4ccfb49",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/appointment/patient/93ddf9db-10e4-4bae-bf94-cc2315f09724",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"appointment",
+												"patient",
+												"93ddf9db-10e4-4bae-bf94-cc2315f09724"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get appointments of a doctor - Admin",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "files",
+													"type": "file",
+													"src": "/D:/Downloads/Topics.docx"
+												},
+												{
+													"key": "doctorId",
+													"value": "861177bc-fd6c-4d65-a2e9-9efd6e1f412f",
+													"type": "text"
+												},
+												{
+													"key": "patientId",
+													"value": "c985971e-e3e0-4bb5-9466-6e4bd4ccfb49",
+													"type": "text"
+												},
+												{
+													"key": "date",
+													"value": "2022-06-05",
+													"type": "text"
+												},
+												{
+													"key": "slotTime",
+													"value": "08:00",
+													"type": "text"
+												},
+												{
+													"key": "slotType",
+													"value": "EVENING",
+													"type": "text"
+												},
+												{
+													"key": "appointmentType",
+													"value": "ONLINE",
+													"type": "text"
+												},
+												{
+													"key": "purpose",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "medicalDetails",
+													"value": "fever",
+													"type": "text"
+												},
+												{
+													"key": "message",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "amount",
+													"value": "1000",
+													"type": "text"
+												},
+												{
+													"key": "paymentId",
+													"value": "a33f0a34-30d9-42da-b4c1-822cd8590f68",
+													"type": "text"
+												},
+												{
+													"key": "parentId",
+													"value": "c985971e-e3e0-4bb5-9466-6e4bd4ccfb49",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/appointment/doctor/27c2ced2-b960-4439-a9b7-26d540841557",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"appointment",
+												"doctor",
+												"27c2ced2-b960-4439-a9b7-26d540841557"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get all appointments - Admin",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "files",
+													"type": "file",
+													"src": "/D:/Downloads/Topics.docx"
+												},
+												{
+													"key": "doctorId",
+													"value": "861177bc-fd6c-4d65-a2e9-9efd6e1f412f",
+													"type": "text"
+												},
+												{
+													"key": "patientId",
+													"value": "c985971e-e3e0-4bb5-9466-6e4bd4ccfb49",
+													"type": "text"
+												},
+												{
+													"key": "date",
+													"value": "2022-06-05",
+													"type": "text"
+												},
+												{
+													"key": "slotTime",
+													"value": "08:00",
+													"type": "text"
+												},
+												{
+													"key": "slotType",
+													"value": "EVENING",
+													"type": "text"
+												},
+												{
+													"key": "appointmentType",
+													"value": "ONLINE",
+													"type": "text"
+												},
+												{
+													"key": "purpose",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "medicalDetails",
+													"value": "fever",
+													"type": "text"
+												},
+												{
+													"key": "message",
+													"value": "test",
+													"type": "text"
+												},
+												{
+													"key": "amount",
+													"value": "1000",
+													"type": "text"
+												},
+												{
+													"key": "paymentId",
+													"value": "a33f0a34-30d9-42da-b4c1-822cd8590f68",
+													"type": "text"
+												},
+												{
+													"key": "parentId",
+													"value": "c985971e-e3e0-4bb5-9466-6e4bd4ccfb49",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/appointment?offset=0&limit=10&timeFilter=FUTURE",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"appointment"
+											],
+											"query": [
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "timeFilter",
+													"value": "PAST",
+													"disabled": true
+												},
+												{
+													"key": "timeFilter",
+													"value": "PRESENT",
+													"disabled": true
+												},
+												{
+													"key": "timeFilter",
+													"value": "FUTURE"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get a appointment by id - Admin",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/appointment/b099edbe-f0cb-4097-9b7b-5ed140540b50",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"appointment",
+												"b099edbe-f0cb-4097-9b7b-5ed140540b50"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get a appointment by id - Admin Copy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"status\": \"CANCELED\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/appointment/{{appointmentId}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"appointment",
+												"{{appointmentId}}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Pharmacy",
+							"item": [
+								{
+									"name": "Get all pharmacies - Admin",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/pharmacy?offset=0&limit=10",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"pharmacy"
+											],
+											"query": [
+												{
+													"key": "offset",
+													"value": "0"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get a pharmacy by pharmacy id - Admin",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/pharmacy/ce57cb62-6e82-4b31-ab46-b8bdd3ff0222",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"pharmacy",
+												"ce57cb62-6e82-4b31-ab46-b8bdd3ff0222"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add a pharmacy - Admin",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"ganeshpharmacy441@gmail.com\",\r\n    \"phoneNumber\": \"0776161044\",\r\n    \"businessName\": \"Ganesh\",\r\n    \"district\": \"Matara\",\r\n    \"address\": \"Dickwella\",\r\n    \"pharmacistName\": \"Ganesh\",\r\n    \"regNo\": \"456\",\r\n    \"brNo\": \"123\",\r\n    \"maxDeliveryDistance\": 10.5,\r\n    \"serviceArea\": \"BOTH\",\r\n    \"description\": \"description\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/pharmacy",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"pharmacy"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update a pharmacy - Admin",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"ganeshpharmacy44111@gmail.com\",\r\n    \"phoneNumber\": \"0776161041\",\r\n    \"businessName\": \"Ganesh1\",\r\n    \"district\": \"Matara1\",\r\n    \"address\": \"Dickwella1\",\r\n    \"pharmacistName\": \"Ganesh1\",\r\n    \"regNo\": \"4561\",\r\n    \"maxDeliveryDistance\": 10.15,\r\n    \"description\": \"description1\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/pharmacy/069fae61-ab33-4164-9391-edf943071a21",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"pharmacy",
+												"069fae61-ab33-4164-9391-edf943071a21"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Availability",
+							"item": [
+								{
+									"name": "Get for upcoming week by doctor id - Admin",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/availability/{{doctorId}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"availability",
+												"{{doctorId}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get for a date by doctor id - Admin",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/availability/{{doctorId}}/{{date}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"availability",
+												"{{doctorId}}",
+												"{{date}}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "SignIn - Admin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"const token = jsonData.data.token;\r",
+											"pm.environment.set('access_token', token);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshnayanajith40@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/sign-in",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"sign-in"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Forgot password - Admin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshnayanajith40@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/forgot-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"forgot-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify email code - Admin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshnayanajith40@gmail.com\",\r\n    \"code\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/verify-email-code",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"verify-email-code"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update password - Admin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshnayanajith40@gmail.com\",\r\n    \"code\": \"1234\",\r\n    \"password\": \"passworupdated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/update-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"update-password"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Socai logins",
+							"item": [
+								{
+									"name": "SignUp - Google",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc0ODNhMDg4ZDRmZmMwMDYwOWYwZTIyZjNjMjJkYTVmZTM5MDZjY2MiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMjY1MTA4OTQ5MTYtcnZ0dm1yc2Nrb245MnVocm1jZHFsMHJjY3BkcGY5bWouYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIzMjY1MTA4OTQ5MTYtdjhmcGRocmdjdHBvbTZ2dTQ5ajdmbGI0MG00ZGhsZzIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTE4Mzc1NjYyNzA5MzQ5MTc2NzIiLCJlbWFpbCI6InNsaW1tb3J0YWxzLjAwM0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IjY3Q1FpTG9PdnlsMmtCd0h6eVBxOHciLCJub25jZSI6IlFHN2VYSG9WRWFSYURPaE9vVzN3Z1dudWVvRk5MaFVOTzJSRFd4NndXclUiLCJuYW1lIjoiVXNoYW4gRmVybmFuZG8iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFUWEFKd3FSdmRhdzNpc3I2Y3VtSGItR0dNZ0swd21XNG40eksyUG5scHE9czk2LWMiLCJnaXZlbl9uYW1lIjoiVXNoYW4iLCJmYW1pbHlfbmFtZSI6IkZlcm5hbmRvIiwibG9jYWxlIjoiZW4iLCJpYXQiOjE2NTQ3NjE2MjUsImV4cCI6MTY1NDc2NTIyNX0.N7ksgJP67ncpQThBLIMXC3QuOdazZtbfGIW7Ng_mQc_O4Z-2cLio1ZHgnsOd1DA_ZYjza29mSEL4N4GtIQhpKxPYB67iRZK0g35h10hXL_IFCm4u9rL_vsDH9raFzy8NStyNJ6UHJG8uA2uAU_ZmnDS7ZPngyPjlXanDM0SKUCqv7JqRFMiuvrJrmJnFL48r3OEasKrRqJFIQ_0GqCqdJwAIMeZFlHWZWsZmNYtz2t9JSCagWxVYYfLwYB-xe9jGFPu3wkMDIPJfL8w_UONBi-ryGCk5ffkZ6thECqydjSFkmECmG-mz1B_yca_r-B0E3woMtcXTUzqLz8V8nVGjxw\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/user/sign-up/google",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"user",
+												"sign-up",
+												"google"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Send OTP",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"const token = jsonData.data.token;\r",
+											"pm.environment.set('access_token', token);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"phoneNumber\": \"0776361044\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/send-otp",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"send-otp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SignUp - Doctor",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"const token = jsonData.data.token;\r",
+											"pm.environment.set('access_token', token);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"otp\": 1234,\r\n    \"email\": \"ganeshdoctor03@gmail.com\",\r\n    \"authProvider\": \"EMAIL_PASSWORD\",\r\n    \"password\": \"password\",\r\n    \"phoneNumber\": \"0776361003\",\r\n    \"userType\": \"DOCTOR\",\r\n    \"name\": \"Ganesh\",\r\n    \"gender\": \"MALE\",\r\n    \"district\": \"Matara\",\r\n    \"privateClinicAddress\": \"Dickwella\",\r\n    \"telephoneNumber\": \"0719960702\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"languages\": [\r\n        \"English\"\r\n    ],\r\n    \"serviceCategories\": [\r\n        \"Heart\",\r\n        \"Eye\"\r\n    ],\r\n    \"regNo\": \"MALE\",\r\n    \"experienceYears\": 2,\r\n    \"serviceAreas\": [\r\n        \"ONLINE\",\r\n        \"PRIVATE_CLINIC\"\r\n    ],\r\n    \"qualifications\": [\r\n        \"MBBS\"\r\n    ],\r\n    \"memberships\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/doctor/sign-up",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"doctor",
+										"sign-up"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SignUp - Patient",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"const token = jsonData.data.token;\r",
+											"pm.environment.set('access_token', token);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"otp\": 1234,\r\n    \"email\": \"ganeshpatient02@gmail.com\",\r\n    \"authProvider\": \"EMAIL_PASSWORD\",\r\n    \"password\": \"password\",\r\n    \"phoneNumber\": \"0776361002\",\r\n    \"userType\": \"GUARDIAN\",\r\n    \"name\": \"Ganesh\",\r\n    \"gender\": \"MALE\",\r\n    \"district\": \"Matara\",\r\n    \"address\": \"Dickwella\",\r\n    \"dob\": \"1996-07-02\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/patient/sign-up",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"patient",
+										"sign-up"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register - Pharmacy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"otp\": 1234,\r\n    \"email\": \"ganeshpharmacy44@gmail.com\",\r\n    \"authProvider\": \"EMAIL_PASSWORD\",\r\n    \"password\": \"password\",\r\n    \"phoneNumber\": \"0776361044\",\r\n    \"userType\": \"PHARMACY\",\r\n    \"businessName\": \"Ganesh\",\r\n    \"district\": \"Matara\",\r\n    \"address\": \"Dickwella\",\r\n    \"pharmacistName\": \"Ganesh\",\r\n    \"regNo\": \"456\",\r\n    \"brNo\": \"123\",\r\n    \"maxDeliveryDistance\": 10.5,\r\n    \"serviceArea\": \"BOTH\",\r\n    \"description\": \"description\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/pharmacy/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"pharmacy",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SignIn - Doctor",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"const token = jsonData.data.token;\r",
+											"pm.environment.set('access_token', token);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganesh.exeve1@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/doctor/sign-in",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"doctor",
+										"sign-in"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SignIn - Patient",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"const token = jsonData.data.token;\r",
+											"pm.environment.set('access_token', token);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshpatient02@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/patient/sign-in",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"patient",
+										"sign-in"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SignIn - Pharmacy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"const token = jsonData.data.token;\r",
+											"pm.environment.set('access_token', token);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshpharmacy@gmail.com\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/pharmacy/sign-in",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"pharmacy",
+										"sign-in"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Validate existing users",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"const token = jsonData.data.token;\r",
+											"pm.environment.set('access_token', token);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshpatients@gmail.com\",\r\n    \"phoneNumber\": \"0776361033\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/validate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"validate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Validate existing doctors",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"const token = jsonData.data.token;\r",
+											"pm.environment.set('access_token', token);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshdoctorz03@gmail.com\",\r\n    \"authProvider\": \"EMAIL_PASSWORD\",\r\n    \"password\": \"password\",\r\n    \"phoneNumber\": \"0776361703\",\r\n    \"userType\": \"DOCTOR\",\r\n    \"name\": \"Ganesh\",\r\n    \"gender\": \"MALE\",\r\n    \"district\": \"Matara\",\r\n    \"privateClinicAddress\": \"Dickwella\",\r\n    \"telephoneNumber\": \"0719960702\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"languages\": [\r\n        \"English\"\r\n    ],\r\n    \"serviceCategories\": [\r\n        \"Heart\",\r\n        \"Eye\"\r\n    ],\r\n    \"regNo\": \"MALE\",\r\n    \"experienceYears\": 2,\r\n    \"serviceAreas\": [\r\n        \"ONLINE\",\r\n        \"PRIVATE_CLINIC\"\r\n    ],\r\n    \"qualifications\": [\r\n        \"MBBS\"\r\n    ],\r\n    \"memberships\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/doctor/validate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"doctor",
+										"validate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Validate existing patients",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"const token = jsonData.data.token;\r",
+											"pm.environment.set('access_token', token);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshpatient02@gmail.com\",\r\n    \"authProvider\": \"EMAIL_PASSWORD\",\r\n    \"password\": \"password\",\r\n    \"phoneNumber\": \"0776361002\",\r\n    \"userType\": \"GUARDIAN\",\r\n    \"name\": \"Ganesh\",\r\n    \"gender\": \"MALE\",\r\n    \"district\": \"Matara\",\r\n    \"address\": \"Dickwella\",\r\n    \"dob\": \"1996-07-02\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/patient/validate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"patient",
+										"validate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Validate existing pharmacies",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData = pm.response.json();\r",
+											"const token = jsonData.data.token;\r",
+											"pm.environment.set('access_token', token);\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshpharmacy44@gmail.com\",\r\n    \"authProvider\": \"EMAIL_PASSWORD\",\r\n    \"password\": \"password\",\r\n    \"phoneNumber\": \"0776361044\",\r\n    \"userType\": \"PHARMACY\",\r\n    \"businessName\": \"Ganesh\",\r\n    \"district\": \"Matara\",\r\n    \"address\": \"Dickwella\",\r\n    \"pharmacistName\": \"Ganesh\",\r\n    \"regNo\": \"456\",\r\n    \"brNo\": \"123\",\r\n    \"maxDeliveryDistance\": 10.5,\r\n    \"serviceArea\": \"BOTH\",\r\n    \"description\": \"description\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/pharmacy/validate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"pharmacy",
+										"validate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all - Patient",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/patient",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"patient"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all - Doctor",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/doctor",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"doctor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all - Pharmacy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/pharmacy",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"pharmacy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by Id - Doctor",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/doctor/6176cd5e-d0c2-4b98-9e7c-6fda5c1dfb91",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"doctor",
+										"6176cd5e-d0c2-4b98-9e7c-6fda5c1dfb91"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by Id - Patient",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/patient/c985971e-e3e0-4bb5-9466-6e4bd4ccfb49",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"patient",
+										"c985971e-e3e0-4bb5-9466-6e4bd4ccfb49"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by Id - Pharmacy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/pharmacy/ff46554c-c28b-4c5f-8847-e0bac37ce4d5",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"pharmacy",
+										"ff46554c-c28b-4c5f-8847-e0bac37ce4d5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get profile - Doctor",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/doctor/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"doctor",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get profile - Patient",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/patient/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"patient",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get profile - Pharmacy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/pharmacy/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"pharmacy",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update - Patient",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshpatient@gmail.com\",\r\n    \"phoneNumber\": \"07763610613\",\r\n    \"name\": \"GaneshUpdated\",\r\n    \"gender\": \"FEMALE\",\r\n    \"district\": \"MataraUpdated\",\r\n    \"address\": \"DickwellaUpdated\",\r\n    \"dob\": \"1996-07-03\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/patient/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"patient",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update - Doctor",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"experienceYears\": \"12\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/doctor/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"doctor",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update - Pharmacy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshpharmacy@gmail.com\",\r\n    \"phoneNumber\": \"0776361064\",\r\n    \"businessName\": \"GaneshUpdated\",\r\n    \"district\": \"MataraUpdated\",\r\n    \"address\": \"DickwellaUpdated\",\r\n    \"pharmacistName\": \"GaneshUpdated\",\r\n    \"regNo\": \"455\",\r\n    \"brNo\": \"1234\",\r\n    \"maxDeliveryDistance\": 10.510,\r\n    \"serviceArea\": \"BOTH\",\r\n    \"description\": \"descriptionUpdated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/pharmacy/profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"pharmacy",
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get doctor's patients",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshpharmacy@gmail.com\",\r\n    \"phoneNumber\": \"0776361064\",\r\n    \"businessName\": \"GaneshUpdated\",\r\n    \"district\": \"MataraUpdated\",\r\n    \"address\": \"DickwellaUpdated\",\r\n    \"pharmacistName\": \"GaneshUpdated\",\r\n    \"regNo\": \"455\",\r\n    \"brNo\": \"1234\",\r\n    \"maxDeliveryDistance\": 10.510,\r\n    \"serviceArea\": \"BOTH\",\r\n    \"description\": \"descriptionUpdated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/doctor/patients",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"doctor",
+										"patients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Forgot password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganesh.exeve@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/forgot-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"forgot-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Verify email code",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshdoctor@gmail.com\",\r\n    \"code\":\"9842\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/verify-email-code",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"verify-email-code"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"ganeshdoctor@gmail.com\",\r\n    \"code\": \"9842\",\r\n    \"password\": \"passworupdated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/update-password",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"update-password"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Avaialbility",
+					"item": [
+						{
+							"name": "Doctor - Add availability",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"consultationTime\": 15,\r\n    \"gapTime\": 15,\r\n    \"generalHours\": [\r\n        {\r\n            \"dayIndex\": 6,\r\n            \"morningStart\": \"09:00\",\r\n            \"morningEnd\": \"11:00\",\r\n            \"eveningStart\": \"14:00\",\r\n            \"eveningEnd\": \"15:00\"\r\n        }\r\n    ],\r\n    \"specialHours\": [\r\n        {\r\n            \"date\": \"2022-10-26\",\r\n            \"morningType\": \"INCLUDE\",\r\n            \"morningStart\": \"11:00\",\r\n            \"morningEnd\": \"12:00\",\r\n            \"eveningType\": \"EXCLUDE\",\r\n            \"eveningStart\": \"14:00\",\r\n            \"eveningEnd\": \"15:00\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/availability/doctor/add",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"availability",
+										"doctor",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Doctor - Get availability",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/availability/doctor/get",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"availability",
+										"doctor",
+										"get"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Patient - Get availability for upcoming week",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/availability/patient/get/{{doctorId}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"availability",
+										"patient",
+										"get",
+										"{{doctorId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Patient - Get availability for a special date",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/availability/patient/get/{{doctorId}}/{{date}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"availability",
+										"patient",
+										"get",
+										"{{doctorId}}",
+										"{{date}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Appointment",
+					"item": [
+						{
+							"name": "Create - Patient",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "doctorId",
+											"value": "27c2ced2-b960-4439-a9b7-26d540841557",
+											"type": "text"
+										},
+										{
+											"key": "patientId",
+											"value": "bd1c9826-7bb0-43a8-bc99-07f65968f31a",
+											"type": "text"
+										},
+										{
+											"key": "parentId",
+											"value": "bd1c9826-7bb0-43a8-bc99-07f65968f31a",
+											"type": "text"
+										},
+										{
+											"key": "paymentId",
+											"value": "a33f0a34-30d9-42da-b4c1-822cd8590f68",
+											"type": "text"
+										},
+										{
+											"key": "slotTime",
+											"value": "11:00",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2022-08-30",
+											"type": "text"
+										},
+										{
+											"key": "slotType",
+											"value": "EVENING",
+											"type": "text"
+										},
+										{
+											"key": "appointmentType",
+											"value": "ONLINE",
+											"type": "text"
+										},
+										{
+											"key": "purpose",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "medicalDetails",
+											"value": "fever",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "amount",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/D:/Downloads/_Images/1_l4xICbIIYlz1OTymWCoUTw.jpeg"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": [],
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/appointment/patient",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"appointment",
+										"patient"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update - Patient",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "slotTime",
+											"value": "08:00",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2022-06-05",
+											"type": "text"
+										},
+										{
+											"key": "slotType",
+											"value": "EVENING",
+											"type": "text"
+										},
+										{
+											"key": "appointmentType",
+											"value": "ONLINE",
+											"type": "text"
+										},
+										{
+											"key": "purpose",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "medicalDetails",
+											"value": "fever",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "attachments",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "attachments",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/appointment/patient/ee28f9f3-a929-4cb7-bf76-f9ebede950cd",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"appointment",
+										"patient",
+										"ee28f9f3-a929-4cb7-bf76-f9ebede950cd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get - Patient",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/D:/Downloads/Topics.docx"
+										},
+										{
+											"key": "doctorId",
+											"value": "861177bc-fd6c-4d65-a2e9-9efd6e1f412f",
+											"type": "text"
+										},
+										{
+											"key": "patientId",
+											"value": "c985971e-e3e0-4bb5-9466-6e4bd4ccfb49",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2022-06-05",
+											"type": "text"
+										},
+										{
+											"key": "slotTime",
+											"value": "08:00",
+											"type": "text"
+										},
+										{
+											"key": "slotType",
+											"value": "EVENING",
+											"type": "text"
+										},
+										{
+											"key": "appointmentType",
+											"value": "ONLINE",
+											"type": "text"
+										},
+										{
+											"key": "purpose",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "medicalDetails",
+											"value": "fever",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "amount",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "paymentId",
+											"value": "a33f0a34-30d9-42da-b4c1-822cd8590f68",
+											"type": "text"
+										},
+										{
+											"key": "parentId",
+											"value": "c985971e-e3e0-4bb5-9466-6e4bd4ccfb49",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/appointment/patient",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"appointment",
+										"patient"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get - Doctor",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/D:/Downloads/Topics.docx"
+										},
+										{
+											"key": "doctorId",
+											"value": "861177bc-fd6c-4d65-a2e9-9efd6e1f412f",
+											"type": "text"
+										},
+										{
+											"key": "patientId",
+											"value": "c985971e-e3e0-4bb5-9466-6e4bd4ccfb49",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2022-06-05",
+											"type": "text"
+										},
+										{
+											"key": "slotTime",
+											"value": "08:00",
+											"type": "text"
+										},
+										{
+											"key": "slotType",
+											"value": "EVENING",
+											"type": "text"
+										},
+										{
+											"key": "appointmentType",
+											"value": "ONLINE",
+											"type": "text"
+										},
+										{
+											"key": "purpose",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "medicalDetails",
+											"value": "fever",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "amount",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "paymentId",
+											"value": "a33f0a34-30d9-42da-b4c1-822cd8590f68",
+											"type": "text"
+										},
+										{
+											"key": "parentId",
+											"value": "c985971e-e3e0-4bb5-9466-6e4bd4ccfb49",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/appointment/doctor",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"appointment",
+										"doctor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/D:/Downloads/Topics.docx"
+										},
+										{
+											"key": "doctorId",
+											"value": "861177bc-fd6c-4d65-a2e9-9efd6e1f412f",
+											"type": "text"
+										},
+										{
+											"key": "patientId",
+											"value": "c985971e-e3e0-4bb5-9466-6e4bd4ccfb49",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2022-06-05",
+											"type": "text"
+										},
+										{
+											"key": "slotTime",
+											"value": "08:00",
+											"type": "text"
+										},
+										{
+											"key": "slotType",
+											"value": "EVENING",
+											"type": "text"
+										},
+										{
+											"key": "appointmentType",
+											"value": "ONLINE",
+											"type": "text"
+										},
+										{
+											"key": "purpose",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "medicalDetails",
+											"value": "fever",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "amount",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "paymentId",
+											"value": "a33f0a34-30d9-42da-b4c1-822cd8590f68",
+											"type": "text"
+										},
+										{
+											"key": "parentId",
+											"value": "c985971e-e3e0-4bb5-9466-6e4bd4ccfb49",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/appointment/b099edbe-f0cb-4097-9b7b-5ed140540b50",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"appointment",
+										"b099edbe-f0cb-4097-9b7b-5ed140540b50"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Test order",
+					"item": [
+						{
+							"name": "Create - Doctor",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"doctorId\": \"8f36f191-4d3d-4f6c-8e8c-0dfa52e089ce\",\r\n    \"patientId\": \"b4ddf97c-1f11-4e06-984b-3b84f213d6c7\",\r\n    \"parentId\": \"b4ddf97c-1f11-4e06-984b-3b84f213d6c7\",\r\n    \"appointmentId\": \"61d2167e-53c4-4459-a273-bdecd75a1fe7\",\r\n    \"date\": \"2022-06-30\",\r\n    \"referringProfessionalName\": \"Ganesh\",\r\n    \"slmcNo\": \"123\",\r\n    \"doctorAddress\": \"Matara\",\r\n    \"patientName\": \"Ganesh\",\r\n    \"patientAddress\": \"Matara\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/test-order/doctor",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"test-order",
+										"doctor"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get - Patient",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"doctorId\": \"8f36f191-4d3d-4f6c-8e8c-0dfa52e089ce\",\r\n    \"patientId\": \"b4ddf97c-1f11-4e06-984b-3b84f213d6c7\",\r\n    \"parentId\": \"b4ddf97c-1f11-4e06-984b-3b84f213d6c7\",\r\n    \"appointmentId\": \"61d2167e-53c4-4459-a273-bdecd75a1fe7\",\r\n    \"date\": \"2022-06-30\",\r\n    \"referringProfessionalName\": \"Ganesh\",\r\n    \"slmcNo\": \"123\",\r\n    \"doctorAddress\": \"Matara\",\r\n    \"patientName\": \"Ganesh\",\r\n    \"patientAddress\": \"Matara\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/test-order/patient/61d2167e-53c4-4459-a273-bdecd75a1fe7",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"test-order",
+										"patient",
+										"61d2167e-53c4-4459-a273-bdecd75a1fe7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Medical certificate",
+					"item": [
+						{
+							"name": "Create - Doctor",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"doctorId\": \"6176cd5e-d0c2-4b98-9e7c-6fda5c1dfb91\",\r\n    \"patientId\": \"ac9dab6d-14fc-4f79-b28c-3c0c23388f34\",\r\n    \"parentId\": \"ac9dab6d-14fc-4f79-b28c-3c0c23388f34\",\r\n    \"appointmentId\": \"169ddabd-bcea-4f47-816b-f6c955ca3ff0\",\r\n    \"date\": \"2022-06-30\",\r\n    \"attendingPhysician\": \"Ganesh\",\r\n    \"slmcNo\": \"123\",\r\n    \"doctorAddress\": \"Matara\",\r\n    \"patientName\": \"Ganesh\",\r\n    \"patientAddress\": \"Matara\",\r\n    \"diagnosis\": \"Matara\",\r\n    \"unfitFrom\": \"2022-06-30\",\r\n    \"unfitUntil\": \"2022-06-30\",\r\n    \"remarks\": \"Matara\",\r\n    \"signature\": \"Matara\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/medical-certificate/doctor",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"medical-certificate",
+										"doctor"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Referral",
+					"item": [
+						{
+							"name": "Create - Doctor",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"doctorId\": \"6176cd5e-d0c2-4b98-9e7c-6fda5c1dfb91\",\r\n    \"patientId\": \"ac9dab6d-14fc-4f79-b28c-3c0c23388f34\",\r\n    \"parentId\": \"ac9dab6d-14fc-4f79-b28c-3c0c23388f34\",\r\n    \"appointmentId\": \"169ddabd-bcea-4f47-816b-f6c955ca3ff0\",\r\n    \"date\": \"2022-06-30\",\r\n    \"referringProfessionalName\": \"Ganesh\",\r\n    \"slmcNo\": \"123\",\r\n    \"clinic\": \"Matara\",\r\n    \"patientName\": \"Ganesh\",\r\n    \"patientAddress\": \"Matara\",\r\n    \"reason\": \"Matara\",\r\n    \"medicalHistory\": \"Matara\",\r\n    \"symptoms\": \"Matara\",\r\n    \"result\": \"Matara\",\r\n    \"diagnosis\": \"Matara\",\r\n    \"treatment\": \"Matara\",\r\n    \"note\": \"Matara\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/referral/doctor",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referral",
+										"doctor"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Prescription",
+					"item": [
+						{
+							"name": "Create - Doctor",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"doctorId\": \"58767269-3d03-492a-9f9d-701196b7e3d3\",\r\n        \"patientId\": \"bd1c9826-7bb0-43a8-bc99-07f65968f31a\",\r\n        \"parentId\": \"bd1c9826-7bb0-43a8-bc99-07f65968f31a\",\r\n        \"appointmentId\": \"b099edbe-f0cb-4097-9b7b-5ed140540b50\",\r\n        \"type\": \"TABLET\",\r\n        \"name\": \"Pendol\",\r\n        \"duration\": \"3Days\",\r\n        \"quantityOrVolume\": \"1Tab\",\r\n        \"frequency\": \"3Times/Day\",\r\n        \"remarks\": \"Matara\"\r\n    },\r\n     {\r\n        \"doctorId\": \"58767269-3d03-492a-9f9d-701196b7e3d3\",\r\n        \"patientId\": \"bd1c9826-7bb0-43a8-bc99-07f65968f31a\",\r\n        \"parentId\": \"bd1c9826-7bb0-43a8-bc99-07f65968f31a\",\r\n        \"appointmentId\": \"b099edbe-f0cb-4097-9b7b-5ed140540b50\",\r\n        \"type\": \"TABLET\",\r\n        \"name\": \"Pendol\",\r\n        \"duration\": \"3Days\",\r\n        \"quantityOrVolume\": \"1Tab\",\r\n        \"frequency\": \"3Times/Day\",\r\n        \"remarks\": \"Matara\"\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/prescription/doctor",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"prescription",
+										"doctor"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PharmacyOrder",
+					"item": [
+						{
+							"name": "Create - Patient",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pharmacyId\": \"ee232603-6018-4f70-b037-5c21e38e980a\",\r\n    \"email\": \"ganeshpatient@gmail.com\",\r\n    \"phoneNumber\": \"0776361069\",\r\n    \"name\": \"Ganesh\",\r\n    \"address\": \"Matara\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"prescriptions\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/pharmacy-order/patient",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pharmacy-order",
+										"patient"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update - Pharmacy",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"price\": 1,\r\n    \"status\": \"ACCEPTED\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/pharmacy-order/34e5e47b-14ee-42d7-be08-cc343464f368",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pharmacy-order",
+										"34e5e47b-14ee-42d7-be08-cc343464f368"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all - Patient",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "pharmacyId",
+											"value": "9b4dc6c4-4ba2-4f34-818c-a7427017babb",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "ganeshpatient@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phoneNumber",
+											"value": "0776361069",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Ganesh",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Matara",
+											"type": "text"
+										},
+										{
+											"key": "dob",
+											"value": "1996-07-02",
+											"type": "text"
+										},
+										{
+											"key": "longitude",
+											"value": "1.1234",
+											"type": "text"
+										},
+										{
+											"key": "latitude",
+											"value": "1.1234",
+											"type": "text"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/D:/Downloads/_Images/1_Gxz-GjfXj4nzJxU472kvzw.png",
+											"disabled": true
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/D:/Downloads/_Images/GitHub-Mark.zip",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/pharmacy-order/patient",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pharmacy-order",
+										"patient"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all - Pharmacy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "pharmacyId",
+											"value": "9b4dc6c4-4ba2-4f34-818c-a7427017babb",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "ganeshpatient@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phoneNumber",
+											"value": "0776361069",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Ganesh",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Matara",
+											"type": "text"
+										},
+										{
+											"key": "dob",
+											"value": "1996-07-02",
+											"type": "text"
+										},
+										{
+											"key": "longitude",
+											"value": "1.1234",
+											"type": "text"
+										},
+										{
+											"key": "latitude",
+											"value": "1.1234",
+											"type": "text"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/D:/Downloads/_Images/1_Gxz-GjfXj4nzJxU472kvzw.png",
+											"disabled": true
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/D:/Downloads/_Images/GitHub-Mark.zip",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/pharmacy-order/pharmacy",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pharmacy-order",
+										"pharmacy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "pharmacyId",
+											"value": "9b4dc6c4-4ba2-4f34-818c-a7427017babb",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "ganeshpatient@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phoneNumber",
+											"value": "0776361069",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Ganesh",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Matara",
+											"type": "text"
+										},
+										{
+											"key": "dob",
+											"value": "1996-07-02",
+											"type": "text"
+										},
+										{
+											"key": "longitude",
+											"value": "1.1234",
+											"type": "text"
+										},
+										{
+											"key": "latitude",
+											"value": "1.1234",
+											"type": "text"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/D:/Downloads/_Images/1_Gxz-GjfXj4nzJxU472kvzw.png",
+											"disabled": true
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/D:/Downloads/_Images/GitHub-Mark.zip",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/pharmacy-order/34e5e47b-14ee-42d7-be08-cc343464f368",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pharmacy-order",
+										"34e5e47b-14ee-42d7-be08-cc343464f368"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Favourite",
+					"item": [
+						{
+							"name": "Add favoutite doctor - Patient",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pharmacyId\": \"6f7ae58b-1155-4a47-9f75-8e7d2af460d6\",\r\n    \"email\": \"ganeshpatient@gmail.com\",\r\n    \"phoneNumber\": \"0776361069\",\r\n    \"name\": \"Ganesh\",\r\n    \"address\": \"Matara\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"prescriptions\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/favourite/patient/add-doctor/6176cd5e-d0c2-4b98-9e7c-6fda5c1dfb91",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"favourite",
+										"patient",
+										"add-doctor",
+										"6176cd5e-d0c2-4b98-9e7c-6fda5c1dfb91"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove favoutite doctor - Patient",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pharmacyId\": \"6f7ae58b-1155-4a47-9f75-8e7d2af460d6\",\r\n    \"email\": \"ganeshpatient@gmail.com\",\r\n    \"phoneNumber\": \"0776361069\",\r\n    \"name\": \"Ganesh\",\r\n    \"address\": \"Matara\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"prescriptions\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/favourite/patient/remove-doctor/4c5c0546-e978-427b-80b7-8459e3853b8d",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"favourite",
+										"patient",
+										"remove-doctor",
+										"4c5c0546-e978-427b-80b7-8459e3853b8d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get favoutite doctors - Patient",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pharmacyId\": \"6f7ae58b-1155-4a47-9f75-8e7d2af460d6\",\r\n    \"email\": \"ganeshpatient@gmail.com\",\r\n    \"phoneNumber\": \"0776361069\",\r\n    \"name\": \"Ganesh\",\r\n    \"address\": \"Matara\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"prescriptions\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/favourite/patient/get-doctors",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"favourite",
+										"patient",
+										"get-doctors"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add favoutite pharmacy - Patient",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pharmacyId\": \"6f7ae58b-1155-4a47-9f75-8e7d2af460d6\",\r\n    \"email\": \"ganeshpatient@gmail.com\",\r\n    \"phoneNumber\": \"0776361069\",\r\n    \"name\": \"Ganesh\",\r\n    \"address\": \"Matara\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"prescriptions\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/favourite/patient/add-pharmacy/ff46554c-c28b-4c5f-8847-e0bac37ce4d5",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"favourite",
+										"patient",
+										"add-pharmacy",
+										"ff46554c-c28b-4c5f-8847-e0bac37ce4d5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove favoutite pharmacy - Patient",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pharmacyId\": \"6f7ae58b-1155-4a47-9f75-8e7d2af460d6\",\r\n    \"email\": \"ganeshpatient@gmail.com\",\r\n    \"phoneNumber\": \"0776361069\",\r\n    \"name\": \"Ganesh\",\r\n    \"address\": \"Matara\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"prescriptions\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/favourite/patient/remove-pharmacy/8378c45c-55d8-4273-8eac-c5bfcc26efab",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"favourite",
+										"patient",
+										"remove-pharmacy",
+										"8378c45c-55d8-4273-8eac-c5bfcc26efab"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get favoutite pharmacies - Patient",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pharmacyId\": \"6f7ae58b-1155-4a47-9f75-8e7d2af460d6\",\r\n    \"email\": \"ganeshpatient@gmail.com\",\r\n    \"phoneNumber\": \"0776361069\",\r\n    \"name\": \"Ganesh\",\r\n    \"address\": \"Matara\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"prescriptions\": []\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/favourite/patient/get-pharmacies",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"favourite",
+										"patient",
+										"get-pharmacies"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "_Send SMS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://app.notify.lk/api/v1/send?user_id=23000&api_key=cjIRT9NLomXWaMeW9lpk&sender_id=NotifyDEMO&to=94776361069&message=Test",
+							"protocol": "https",
+							"host": [
+								"app",
+								"notify",
+								"lk"
+							],
+							"path": [
+								"api",
+								"v1",
+								"send"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "23000"
+								},
+								{
+									"key": "api_key",
+									"value": "cjIRT9NLomXWaMeW9lpk"
+								},
+								{
+									"key": "sender_id",
+									"value": "NotifyDEMO"
+								},
+								{
+									"key": "to",
+									"value": "94776361069"
+								},
+								{
+									"key": "message",
+									"value": "Test"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
