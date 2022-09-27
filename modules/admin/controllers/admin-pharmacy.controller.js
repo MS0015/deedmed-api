@@ -8,8 +8,14 @@ const CustomHttpError = require('../../../lib/custom-http-error');
 
 exports.getAll = async (req, res, next) => {
   try {
-    const { offset, limit } = await CommonValidator.isValidOffsetLimit(req.query);
-    const result = await AdminPharmacyService.getAll(offset, limit);
+    const {
+      offset,
+      limit,
+      searchText,
+      maxDeliveryDistanceFilter,
+      serviceAreaFilter
+    } = await AdminPharmacyValidator.getAllValidation(req.query);
+    const result = await AdminPharmacyService.getAll(offset, limit, searchText, maxDeliveryDistanceFilter, serviceAreaFilter);
     Utils.successResponse(res, HTTP_CODES.OK, MESSAGES.PHARMACIES_GET_SUCCESS, result);
   } catch (err) {
     Utils.errorResponse(res, err);

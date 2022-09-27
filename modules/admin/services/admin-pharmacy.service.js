@@ -8,9 +8,9 @@ const Utils = require('../../../lib/utils');
 
 class AdminPharmacyService {
 
-  static async getAll(offset, limit) {
+  static async getAll(offset, limit, searchText, maxDeliveryDistanceFilter, serviceAreaFilter) {
     try {
-      const result = await AdminPharmacyRepository.getAll(offset, limit);
+      const result = await AdminPharmacyRepository.getAll(offset, limit, searchText, maxDeliveryDistanceFilter, serviceAreaFilter);
       return Promise.resolve(result);
     } catch (err) {
       return Promise.reject(err);

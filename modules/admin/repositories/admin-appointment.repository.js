@@ -32,8 +32,16 @@ class AdminAppointmentRepository {
         offset,
         limit
       });
-      const dataCount = await this.getCountByPatientId(patientId);
+      const dataCount = await this.getByPatientIdCount(patientId);
       return Promise.resolve({ data: result, dataCount });
+    } catch (err) {
+      return Promise.reject(err);
+    }
+  }
+
+  static async getByPatientIdCount(patientId) {
+    try {
+      return await Appointment.count({ where: { patientId } });
     } catch (err) {
       return Promise.reject(err);
     }
@@ -66,8 +74,16 @@ class AdminAppointmentRepository {
         offset,
         limit
       });
-      const dataCount = await this.getCountByDoctorId(doctorId);
+      const dataCount = await this.getByDoctorIdCount(doctorId);
       return Promise.resolve({ data: result, dataCount });
+    } catch (err) {
+      return Promise.reject(err);
+    }
+  }
+
+  static async getByDoctorIdCount(doctorId) {
+    try {
+      return await Appointment.count({ where: { doctorId } });
     } catch (err) {
       return Promise.reject(err);
     }
@@ -99,8 +115,16 @@ class AdminAppointmentRepository {
         offset,
         limit
       });
-      const dataCount = await this.getCount();
+      const dataCount = await this.getAllCount();
       return Promise.resolve({ data: result, dataCount });
+    } catch (err) {
+      return Promise.reject(err);
+    }
+  }
+
+  static async getAllCount() {
+    try {
+      return await Appointment.count();
     } catch (err) {
       return Promise.reject(err);
     }
@@ -151,8 +175,36 @@ class AdminAppointmentRepository {
         offset,
         limit
       });
-      const dataCount = await this.getCountForPast(date, slot);
+      const dataCount = await this.getAllPastCount(date, slot);
       return Promise.resolve({ data: result, dataCount });
+    } catch (err) {
+      return Promise.reject(err);
+    }
+  }
+
+  static async getAllPastCount(date, slot) {
+    try {
+      return await Appointment.count({
+        where: {
+          [Op.and]: [
+            {
+              status: {
+                [Op.ne]: APPOINTMENT_STATUS.ONGOING,
+              }
+            },
+            {
+              date: {
+                [Op.lt]: date
+              }
+            },
+            {
+              slotTime: {
+                [Op.lt]: slot
+              }
+            }
+          ]
+        }
+      });
     } catch (err) {
       return Promise.reject(err);
     }
@@ -200,8 +252,33 @@ class AdminAppointmentRepository {
         offset,
         limit
       });
-      const dataCount = await this.getCountForPresent(dateOnlyForNow, timeOnlyForNow, dateOnlyFromThirtyMinutesNow, timeOnlyFromThirtyMinutesNow);
+      const dataCount = await this.getAllPresentCount(dateOnlyForNow, timeOnlyForNow, dateOnlyFromThirtyMinutesNow, timeOnlyFromThirtyMinutesNow);
       return Promise.resolve({ data: result, dataCount });
+    } catch (err) {
+      return Promise.reject(err);
+    }
+  }
+
+  static async getAllPresentCount(dateOnlyForNow, timeOnlyForNow, dateOnlyFromThirtyMinutesNow, timeOnlyFromThirtyMinutesNow) {
+    try {
+      return await Appointment.count({
+        where: {
+          [Op.and]: [
+            {
+              date: {
+                [Op.gte]: dateOnlyForNow,
+                [Op.lte]: dateOnlyFromThirtyMinutesNow
+              }
+            },
+            {
+              slotTime: {
+                [Op.gte]: timeOnlyForNow,
+                [Op.lte]: timeOnlyFromThirtyMinutesNow
+              }
+            }
+          ]
+        }
+      });
     } catch (err) {
       return Promise.reject(err);
     }
@@ -250,8 +327,34 @@ class AdminAppointmentRepository {
         offset,
         limit
       });
-      const dataCount = await this.getCountForFuture(dateOnlyFromThirtyMinutesNow, timeOnlyFromThirtyMinutesNow);
+      const dataCount = await this.getAllFutureCount(dateOnlyFromThirtyMinutesNow, timeOnlyFromThirtyMinutesNow);
       return Promise.resolve({ data: result, dataCount });
+    } catch (err) {
+      return Promise.reject(err);
+    }
+  }
+
+  static async getAllFutureCount(dateOnlyFromThirtyMinutesNow, timeOnlyFromThirtyMinutesNow) {
+    try {
+      return await Appointment.count({
+        where: {
+          [Op.or]: [
+            {
+              date: {
+                [Op.gt]: dateOnlyFromThirtyMinutesNow
+              }
+            },
+            {
+              date: {
+                [Op.eq]: dateOnlyFromThirtyMinutesNow
+              },
+              slotTime: {
+                [Op.gt]: timeOnlyFromThirtyMinutesNow
+              }
+            }
+          ]
+        }
+      });
     } catch (err) {
       return Promise.reject(err);
     }
@@ -292,109 +395,6 @@ class AdminAppointmentRepository {
         ]
       });
       return Promise.resolve(appointments);
-    } catch (err) {
-      return Promise.reject(err);
-    }
-  }
-
-  static async getCountByPatientId(patientId) {
-    try {
-      return await Appointment.count({ where: { patientId } });
-    } catch (err) {
-      return Promise.reject(err);
-    }
-  }
-
-  static async getCountByDoctorId(doctorId) {
-    try {
-      return await Appointment.count({ where: { doctorId } });
-    } catch (err) {
-      return Promise.reject(err);
-    }
-  }
-
-  static async getCount() {
-    try {
-      return await Appointment.count();
-    } catch (err) {
-      return Promise.reject(err);
-    }
-  }
-
-  static async getCountForPast(date, slot) {
-    try {
-      return await Appointment.count({
-        where: {
-          [Op.and]: [
-            {
-              status: {
-                [Op.ne]: APPOINTMENT_STATUS.ONGOING,
-              }
-            },
-            {
-              date: {
-                [Op.lt]: date
-              }
-            },
-            {
-              slotTime: {
-                [Op.lt]: slot
-              }
-            }
-          ]
-        }
-      });
-    } catch (err) {
-      return Promise.reject(err);
-    }
-  }
-
-  static async getCountForPresent(dateOnlyForNow, timeOnlyForNow, dateOnlyFromThirtyMinutesNow, timeOnlyFromThirtyMinutesNow) {
-    try {
-      return await Appointment.count({
-        where: {
-          [Op.and]: [
-            {
-              date: {
-                [Op.gte]: dateOnlyForNow,
-                [Op.lte]: dateOnlyFromThirtyMinutesNow
-              }
-            },
-            {
-              slotTime: {
-                [Op.gte]: timeOnlyForNow,
-                [Op.lte]: timeOnlyFromThirtyMinutesNow
-              }
-            }
-          ]
-        }
-      });
-    } catch (err) {
-      return Promise.reject(err);
-    }
-  }
-
-  static async getCountForFuture(dateOnlyFromThirtyMinutesNow, timeOnlyFromThirtyMinutesNow) {
-    try {
-      return await Appointment.count({
-        where: {
-          [Op.or]: [
-            {
-              date: {
-                [Op.gt]: dateOnlyFromThirtyMinutesNow
-              }
-            },
-            {
-              date: {
-                [Op.eq]: dateOnlyFromThirtyMinutesNow
-              },
-              slotTime: {
-                [Op.gt]: timeOnlyFromThirtyMinutesNow
-              }
-            }
-          ]
-        }
-      });
     } catch (err) {
       return Promise.reject(err);
     }

@@ -1,16 +1,20 @@
 'use strict';
 const { models: { Patient, User } } = require('../../../lib/models/index');
+const { Op } = require('sequelize');
 
 class AdminPatientRepository {
 
-  static async getAll(offset, limit) {
+  static async getAll(userTypes, offset, limit, searchText) {
     try {
-      const result = await Patient.findAll({
+      const options = {
         attributes: {
           exclude: ['UserUserId']
         },
         include: [{
           model: User,
+          where: {
+            userType: userTypes,
+          },
           attributes: {
             exclude: ['password']
           },
@@ -20,17 +24,40 @@ class AdminPatientRepository {
         ],
         offset,
         limit
-      });
-      const dataCount = await this.getCount();
+      };
+      if (searchText) {
+        options.where = {
+          name: {
+            [Op.like]: `%${searchText}%`
+          }
+        };
+      }
+      const result = await Patient.findAll(options);
+      const dataCount = await this.getAllCount(userTypes, searchText);
       return Promise.resolve({ data: result, dataCount });
     } catch (err) {
       return Promise.reject(err);
     }
   }
 
-  static async getCount() {
+  static async getAllCount(userTypes, searchText) {
     try {
-      return await Patient.count();
+      const options = {
+        include: [{
+          model: User,
+          where: {
+            userType: userTypes,
+          },
+        }],
+      };
+      if (searchText) {
+        options.where = {
+          name: {
+            [Op.like]: `%${searchText}%`
+          }
+        };
+      }
+      return await Patient.count(options);
     } catch (err) {
       return Promise.reject(err);
     }

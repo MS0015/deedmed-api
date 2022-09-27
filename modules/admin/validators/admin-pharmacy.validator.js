@@ -38,6 +38,14 @@ const updateSchema = Joi.object().keys({
   description: Joi.string(),
 });
 
+const getAllValidationSchema = Joi.object().keys({
+  offset: Joi.number().default(0),
+  limit: Joi.number().default(10),
+  searchText: Joi.string(),
+  maxDeliveryDistanceFilter: Joi.number().positive(),
+  serviceAreaFilter: Joi.string().valid(SERVICE_AREAS_PHARMACY.HOME_DELIVERY, SERVICE_AREAS_PHARMACY.ON_SIGHT, SERVICE_AREAS_PHARMACY.BOTH),
+});
+
 class AdminPharmacyValidator {
   static createValidation(obj) {
     const { value, error } = createSchema.validate(obj);
@@ -49,6 +57,14 @@ class AdminPharmacyValidator {
 
   static updateValidation(obj) {
     const { value, error } = updateSchema.validate(obj);
+    if (error) {
+      return Promise.reject(new CustomHttpError(HTTP_CODES.BAD_REQUEST, ERRORS.VALIDATION_ERROR, error.message));
+    }
+    return Promise.resolve(value);
+  }
+
+  static getAllValidation(obj) {
+    const { value, error } = getAllValidationSchema.validate(obj);
     if (error) {
       return Promise.reject(new CustomHttpError(HTTP_CODES.BAD_REQUEST, ERRORS.VALIDATION_ERROR, error.message));
     }

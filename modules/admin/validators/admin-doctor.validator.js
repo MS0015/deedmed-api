@@ -25,9 +25,27 @@ const createSchema = Joi.object().keys({
   bankAccountNumber: Joi.string(),
 });
 
+const getAllValidationSchema = Joi.object().keys({
+  offset: Joi.number().default(0),
+  limit: Joi.number().default(10),
+  searchText: Joi.string(),
+  genderFilter: Joi.string().valid(GENDER.MALE, GENDER.FEMALE),
+  experienceYearsFilter: Joi.number(),
+  serviceCategoriesFilter: Joi.string(),
+  serviceAreasFilter: Joi.string().valid(SERVICE_AREAS_DOCTOR.ONLINE, SERVICE_AREAS_DOCTOR.HOME_VISITING, SERVICE_AREAS_DOCTOR.PRIVATE_CLINIC)
+});
+
 class AdminDoctorValidator {
   static createValidation(obj) {
     const { value, error } = createSchema.validate(obj);
+    if (error) {
+      return Promise.reject(new CustomHttpError(HTTP_CODES.BAD_REQUEST, ERRORS.VALIDATION_ERROR, error.message));
+    }
+    return Promise.resolve(value);
+  }
+
+  static getAllValidation(obj) {
+    const { value, error } = getAllValidationSchema.validate(obj);
     if (error) {
       return Promise.reject(new CustomHttpError(HTTP_CODES.BAD_REQUEST, ERRORS.VALIDATION_ERROR, error.message));
     }

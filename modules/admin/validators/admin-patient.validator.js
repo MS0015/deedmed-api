@@ -17,9 +17,24 @@ const createSchema = Joi.object().keys({
   allergies: Joi.array().items(Joi.string()).min(1),
 });
 
+const getAllValidationSchema = Joi.object().keys({
+  userTypes: Joi.array().items(Joi.string().valid(USER_TYPES.GUARDIAN, USER_TYPES.PATIENT)).min(1).required(),
+  offset: Joi.number().default(0),
+  limit: Joi.number().default(10),
+  searchText: Joi.string()
+});
+
 class AdminPatientValidator {
   static createValidation(obj) {
     const { value, error } = createSchema.validate(obj);
+    if (error) {
+      return Promise.reject(new CustomHttpError(HTTP_CODES.BAD_REQUEST, ERRORS.VALIDATION_ERROR, error.message));
+    }
+    return Promise.resolve(value);
+  }
+
+  static getAllValidation(obj) {
+    const { value, error } = getAllValidationSchema.validate(obj);
     if (error) {
       return Promise.reject(new CustomHttpError(HTTP_CODES.BAD_REQUEST, ERRORS.VALIDATION_ERROR, error.message));
     }

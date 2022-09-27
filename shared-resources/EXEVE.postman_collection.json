@@ -3415,7 +3415,7 @@
 												{
 													"key": "file",
 													"type": "file",
-													"src": "/D:/Entertainment/Wallpapers/white.jpg"
+													"src": "/D:/Entertainment/Wallpapers/download.png"
 												},
 												{
 													"key": "name",
@@ -3538,13 +3538,23 @@
 											]
 										},
 										"url": {
-											"raw": "{{base_url}}/admin/patient",
+											"raw": "{{base_url}}/admin/patient?userTypes[]=GUARDIAN&searchText=ganesh",
 											"host": [
 												"{{base_url}}"
 											],
 											"path": [
 												"admin",
 												"patient"
+											],
+											"query": [
+												{
+													"key": "userTypes[]",
+													"value": "GUARDIAN"
+												},
+												{
+													"key": "searchText",
+													"value": "ganesh"
+												}
 											]
 										}
 									},
@@ -3798,6 +3808,23 @@
 											"path": [
 												"admin",
 												"doctor"
+											],
+											"query": [
+												{
+													"key": "genderFilter",
+													"value": "MALE",
+													"disabled": true
+												},
+												{
+													"key": "searchText",
+													"value": "Ganesh",
+													"disabled": true
+												},
+												{
+													"key": "serviceAreasFilter",
+													"value": "HOME_VISITING",
+													"disabled": true
+												}
 											]
 										}
 									},
@@ -3810,6 +3837,9 @@
 											"listen": "test",
 											"script": {
 												"exec": [
+													"const jsonData = pm.response.json();\r",
+													"const doctorId = jsonData.data.doctorId;\r",
+													"pm.environment.set('doctor_id', doctorId);\r",
 													""
 												],
 												"type": "text/javascript"
@@ -3846,6 +3876,55 @@
 											"path": [
 												"admin",
 												"doctor"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update a doctor - Admin",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													""
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"ganeshdoctor056@gmail.com\",\r\n    \"phoneNumber\": \"0776366006\",\r\n    \"name\": \"Ganesh\",\r\n    \"gender\": \"MALE\",\r\n    \"district\": \"Matara\",\r\n    \"privateClinicAddress\": \"Dickwella\",\r\n    \"telephoneNumber\": \"0719960702\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"languages\": [\r\n        \"English\"\r\n    ],\r\n    \"serviceCategories\": [\r\n        \"Heart\",\r\n        \"Eye\"\r\n    ],\r\n    \"regNo\": \"MALE\",\r\n    \"experienceYears\": 2,\r\n    \"serviceAreas\": [\r\n        \"ONLINE\",\r\n        \"PRIVATE_CLINIC\"\r\n    ],\r\n    \"qualifications\": [\r\n        \"MBBS\"\r\n    ],\r\n    \"memberships\": [],\r\n    \"bankAccountHolderName\": \"Ganesh\",\r\n    \"bankName\": \"Sampath\",\r\n    \"bankBranch\": \"Matara\",\r\n    \"bankAccountNumber\": \"1234\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/doctor/{{doctor_id}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"doctor",
+												"{{doctor_id}}"
 											]
 										}
 									},
@@ -4275,7 +4354,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "{{base_url}}/admin/pharmacy?offset=0&limit=10",
+											"raw": "{{base_url}}/admin/pharmacy?offset=0&limit=10&maxDeliveryDistanceFilter=10.5&serviceAreaFilter=BOTH",
 											"host": [
 												"{{base_url}}"
 											],
@@ -4291,6 +4370,14 @@
 												{
 													"key": "limit",
 													"value": "10"
+												},
+												{
+													"key": "maxDeliveryDistanceFilter",
+													"value": "10.5"
+												},
+												{
+													"key": "serviceAreaFilter",
+													"value": "BOTH"
 												}
 											]
 										}
@@ -4460,6 +4547,92 @@
 												"availability",
 												"{{doctorId}}",
 												"{{date}}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Pharmacy order",
+							"item": [
+								{
+									"name": "Get pharmacy order by id - admin",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/pharmacy-order/85566d15-7780-4c59-89fc-89510448fcb2",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"pharmacy-order",
+												"85566d15-7780-4c59-89fc-89510448fcb2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get pharmacy orders - admin",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{access_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/pharmacy-order?type=BOTH&statuses[]=PENDING&fromDate=2022-09-09",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"pharmacy-order"
+											],
+											"query": [
+												{
+													"key": "pharmacyId",
+													"value": "2a7c9aef-d3fe-4601-99a5-00dddb3b3bb2",
+													"disabled": true
+												},
+												{
+													"key": "type",
+													"value": "BOTH"
+												},
+												{
+													"key": "statuses[]",
+													"value": "PENDING"
+												},
+												{
+													"key": "fromDate",
+													"value": "2022-09-09"
+												},
+												{
+													"key": "toDate",
+													"value": "2022-09-10",
+													"disabled": true
+												}
 											]
 										}
 									},
@@ -4729,7 +4902,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"phoneNumber\": \"0776361044\"\r\n}",
+									"raw": "{\r\n    \"phoneNumber\": \"0776361046\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4770,7 +4943,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"otp\": 1234,\r\n    \"email\": \"ganeshdoctor03@gmail.com\",\r\n    \"authProvider\": \"EMAIL_PASSWORD\",\r\n    \"password\": \"password\",\r\n    \"phoneNumber\": \"0776361003\",\r\n    \"userType\": \"DOCTOR\",\r\n    \"name\": \"Ganesh\",\r\n    \"gender\": \"MALE\",\r\n    \"district\": \"Matara\",\r\n    \"privateClinicAddress\": \"Dickwella\",\r\n    \"telephoneNumber\": \"0719960702\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"languages\": [\r\n        \"English\"\r\n    ],\r\n    \"serviceCategories\": [\r\n        \"Heart\",\r\n        \"Eye\"\r\n    ],\r\n    \"regNo\": \"MALE\",\r\n    \"experienceYears\": 2,\r\n    \"serviceAreas\": [\r\n        \"ONLINE\",\r\n        \"PRIVATE_CLINIC\"\r\n    ],\r\n    \"qualifications\": [\r\n        \"MBBS\"\r\n    ],\r\n    \"memberships\": []\r\n}",
+									"raw": "{\r\n    \"otp\": 1234,\r\n    \"email\": \"ganeshdoctor03@gmail.com\",\r\n    \"authProvider\": \"EMAIL_PASSWORD\",\r\n    \"password\": \"password\",\r\n    \"phoneNumber\": \"0776361044\",\r\n    \"userType\": \"DOCTOR\",\r\n    \"name\": \"Ganesh\",\r\n    \"gender\": \"MALE\",\r\n    \"district\": \"Matara\",\r\n    \"privateClinicAddress\": \"Dickwella\",\r\n    \"telephoneNumber\": \"0719960702\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"languages\": [\r\n        \"English\"\r\n    ],\r\n    \"serviceCategories\": [\r\n        \"Heart\",\r\n        \"Eye\"\r\n    ],\r\n    \"regNo\": \"MALE\",\r\n    \"experienceYears\": 2,\r\n    \"serviceAreas\": [\r\n        \"ONLINE\",\r\n        \"PRIVATE_CLINIC\"\r\n    ],\r\n    \"qualifications\": [\r\n        \"MBBS\"\r\n    ],\r\n    \"memberships\": []\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4840,7 +5013,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"otp\": 1234,\r\n    \"email\": \"ganeshpharmacy44@gmail.com\",\r\n    \"authProvider\": \"EMAIL_PASSWORD\",\r\n    \"password\": \"password\",\r\n    \"phoneNumber\": \"0776361044\",\r\n    \"userType\": \"PHARMACY\",\r\n    \"businessName\": \"Ganesh\",\r\n    \"district\": \"Matara\",\r\n    \"address\": \"Dickwella\",\r\n    \"pharmacistName\": \"Ganesh\",\r\n    \"regNo\": \"456\",\r\n    \"brNo\": \"123\",\r\n    \"maxDeliveryDistance\": 10.5,\r\n    \"serviceArea\": \"BOTH\",\r\n    \"description\": \"description\"\r\n}",
+									"raw": "{\r\n    \"otp\": 1234,\r\n    \"email\": \"ganeshpharmacy441@gmail.com\",\r\n    \"authProvider\": \"EMAIL_PASSWORD\",\r\n    \"password\": \"password\",\r\n    \"phoneNumber\": \"0776361046\",\r\n    \"userType\": \"PHARMACY\",\r\n    \"businessName\": \"Ganesh\",\r\n    \"district\": \"Matara\",\r\n    \"address\": \"Dickwella\",\r\n    \"pharmacistName\": \"Ganesh\",\r\n    \"regNo\": \"456\",\r\n    \"brNo\": \"123\",\r\n    \"maxDeliveryDistance\": 10.5,\r\n    \"serviceArea\": \"BOTH\",\r\n    \"description\": \"description\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -6789,7 +6962,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"pharmacyId\": \"ee232603-6018-4f70-b037-5c21e38e980a\",\r\n    \"email\": \"ganeshpatient@gmail.com\",\r\n    \"phoneNumber\": \"0776361069\",\r\n    \"name\": \"Ganesh\",\r\n    \"address\": \"Matara\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"prescriptions\": []\r\n}",
+									"raw": "{\r\n    \"pharmacyId\": \"f9e95d22-2934-4661-aeee-023877ebb42a\",\r\n    \"email\": \"ganeshpatient@gmail.com\",\r\n    \"phoneNumber\": \"0776361069\",\r\n    \"name\": \"Ganesh\",\r\n    \"address\": \"Matara\",\r\n    \"dob\": \"1996-07-02\",\r\n    \"prescriptions\": []\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"

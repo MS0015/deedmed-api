@@ -17,6 +17,7 @@ const adminPatientRouter = require('./modules/admin/routes/admin-patient.routes'
 const adminDoctorRouter = require('./modules/admin/routes/admin-doctor.routes');
 const adminAppointmentRouter = require('./modules/admin/routes/admin-appointment.routes');
 const adminPharmacyRouter = require('./modules/admin/routes/admin-pharmacy.routes');
+const adminPharmacyOrderRouter = require('./modules/admin/routes/admin-pharmacy-order.routes');
 const adminAvailabilityRouter = require('./modules/admin/routes/admin-availability.routes');
 
 const userRouter = require('./modules/user/routes/user.routes');
@@ -67,6 +68,7 @@ app.use(`${BASE_PATH}/admin/patient`, adminPatientRouter);
 app.use(`${BASE_PATH}/admin/doctor`, adminDoctorRouter);
 app.use(`${BASE_PATH}/admin/appointment`, adminAppointmentRouter);
 app.use(`${BASE_PATH}/admin/pharmacy`, adminPharmacyRouter);
+app.use(`${BASE_PATH}/admin/pharmacy-order`, adminPharmacyOrderRouter);
 app.use(`${BASE_PATH}/admin/availability`, adminAvailabilityRouter);
 
 app.use(`${BASE_PATH}/user`, userRouter);

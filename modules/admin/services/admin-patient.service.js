@@ -8,9 +8,9 @@ const { v4: uuid } = require('uuid');
 
 class AdminPatientService {
 
-  static async getAll(offset, limit) {
+  static async getAll(userTypes, offset, limit, searchText) {
     try {
-      const result = await AdminPatientRepository.getAll(offset, limit);
+      const result = await AdminPatientRepository.getAll(userTypes, offset, limit, searchText);
       return Promise.resolve(result);
     } catch (err) {
       return Promise.reject(err);
